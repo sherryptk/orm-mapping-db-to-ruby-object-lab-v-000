@@ -106,9 +106,9 @@ class Student
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql)
+    row = DB[:conn].execute(sql)
 
-    self.new_from_db(DB[:conn].execute(sql))
+    self.new_from_db(row[0])
 binding.pry
 end
 
