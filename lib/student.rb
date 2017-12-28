@@ -107,7 +107,7 @@ class Student
 
     DB[:conn].execute(sql)
 
-    self.new_from_db(row)
+    self.new_from_db(DB[:conn].execute(sql))
   end
 
 end
