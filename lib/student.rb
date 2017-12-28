@@ -109,6 +109,10 @@ class Student
     row = DB[:conn].execute(sql)
 
     self.new_from_db(row[0])
-end
+  end
+
+  def self..all_students_in_grade_X
+
+  end
 
 end
