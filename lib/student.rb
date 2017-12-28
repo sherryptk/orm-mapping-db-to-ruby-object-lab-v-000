@@ -109,7 +109,6 @@ class Student
     row = DB[:conn].execute(sql)
 
     self.new_from_db(row[0])
-binding.pry
 end
 
 end
