@@ -1,13 +1,5 @@
-require 'pry'
 class Student
   attr_accessor :id, :name, :grade
-  attr_reader :id
-
-  # def initialize(name, grade, id = nil)
-  #   @name = name
-  #   @grade = grade
-  #   @id =id
-  # end
 
   def self.new_from_db(row)
     # create a new Student object given a row from the database
@@ -114,7 +106,5 @@ class Student
     SQL
 
     DB[:conn].execute(sql)
-
-  end
 
 end
